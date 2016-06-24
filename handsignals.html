@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+    </title>
+    <style>
+    #hands .hand-signal img {
+        height: 100%;
+        width: 100%;
+    }
+    
+    #hands .hand-signal {
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        margin: 15px;
+        padding: 15px;
+        border: dashed 5px darkgrey;
+        position: relative;
+        float: left;
+    }
+    
+    #hands .hand-signal h1 {
+        font-family: Helvetica;
+        color: darkorange;
+        font-size: 40px;
+        position: absolute;
+        top: -15px;
+        left: 20px;
+    }
+    
+    #hands #hand-head {
+        background-image: url(head.png);
+        background-size: contain;
+    }
+    
+    #hands #hand-head img {
+        transform: translateY(-80px);
+        animation: up-and-down 1s infinite;
+    }
+    
+    #hands #hand-walk img {
+        animation: rotate 2.25s infinite;
+    }
+    
+    @keyframes up-and-down {
+        0% {
+            transform: translateY(-80px);
+        }
+        50% {
+            transform: translateY(0px);
+        }
+        100% {
+            transform: translateY(-80px);
+        }
+    }
+    
+    @keyframes rotate {
+        0% {
+            transform: rotateZ(0deg);
+        }
+        50% {
+            transform: rotateZ(90deg);
+        }
+        100% {
+            transform: rotateZ(0deg);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div id="hands">
+        <div class="hand-signal" id="hand-1">
+            <img src="hand-1.png">
+            <h1>Part 1</h1>
+        </div>
+        <div class="hand-signal" id="hand-2">
+            <img src="hand-2.png">
+            <h1>Part 2</h1>
+        </div>
+        <div class="hand-signal" id="hand-3">
+        	<img src="hand-3.png">
+            <h1>Part 3</h1>
+        </div>
+        <div class="hand-signal" id="hand-4">
+        	<img src="hand-4.png">
+            <h1>Part 4</h1>
+        </div>
+        <div class="hand-signal" id="hand-5">
+        	<img src="hand-5.png">
+            <h1>Part 5</h1>
+        </div>
+        <div class="hand-signal" id="hand-head">
+        	<img src="hand-head.png">
+            <h1>The Head</h1>
+        </div>
+        <div class="hand-signal" id="hand-walk">
+        	<img src="hand-walk.png">
+            <h1>Walking Part</h1>
+        </div>
+        <div class="hand-signal" id="hand-end">
+        	<img src="hand-end.png">
+            <h1>End</h1>
+        </div>
+    </div>
+</body>
+
+</html>
