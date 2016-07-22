@@ -79,28 +79,55 @@
 
     @keyframes faster {
         0% {
-            transform:translateY(0px) scale(1.02);
+            transform:translateY(40px) scale(1.02);
         }
         15% {
-            transform:translateY(20px) scale(1);
+            transform:translateY(60px) scale(1);
         }
         30% {
-            transform:translateY(40px) scale(.98);
+            transform:translateY(80px) scale(.98);
         }
         45% {
-            transform:translateY(20px) scale(.96);
+            transform:translateY(60px) scale(.96);
         }
         55% {
-            transform:translateY(0px) scale(.94);
+            transform:translateY(40px) scale(.94);
         }
         70% {
-            transform:translateY(-20px) scale(.96);
+            transform:translateY(20px) scale(.96);
         }
         85% {
-            transform:translateY(-40px) scale(.98);
+            transform:translateY(0px) scale(.98);
         }
         100% {
-            transform:translateY(-20px) scale(1);
+            transform:translateY(20px) scale(1);
+        }
+    }
+
+    @keyframes repeat {
+        0% {
+            transform:rotate(75deg) translateY(40px) translateX(8px) scale(.82);
+        }
+        15% {
+            transform:rotate(72deg) translateY(60px) translateX(6px) scale(.8);
+        }
+        30% {
+            transform:rotate(69deg) translateY(80px) translateX(4px) scale(.78);
+        }
+        45% {
+            transform:rotate(72deg) translateY(60px) translateX(6px) scale(.76);
+        }
+        55% {
+            transform:rotate(75deg) translateY(40px) translateX(8px) scale(.74);
+        }
+        70% {
+            transform:rotate(78deg) translateY(20px) translateX(10px) scale(.76);
+        }
+        85% {
+            transform:rotate(81deg) translateY(0px) translateX(12px) scale(.78);
+        }
+        100% {
+            transform:rotate(78deg) translateY(20px) translateX(10px) scale(.8);
         }
     }
 
@@ -123,12 +150,14 @@
     }
 
     #hands #hand-faster img {
-        width:100%;
-        height:100%;
-        background-image:url(hand-faster.png);
-        background-size:contain;
         transition:.2s;
         animation: faster 1.6s infinite;
+    }
+
+    #hands #hand-repeat img {
+        transform: rotate(70deg) translateY(40px);
+        transition:.2s;
+        animation: repeat 1.6s infinite;
     }
     </style>
 </head>
@@ -174,6 +203,10 @@
         <div class="hand-signal" id="hand-faster">
             <img src="hand-faster.png">
             <h1>Faster!</h1>
+        </div>
+        <div class="hand-signal" id="hand-repeat">
+            <img src="hand-faster.png">
+            <h1>Repeat</h1>
         </div>
         <div class="hand-signal" id="hand-end">
         	<img src="hand-end.png">
