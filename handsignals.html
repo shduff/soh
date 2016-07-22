@@ -77,6 +77,33 @@
         }
     }
 
+    @keyframes faster {
+        0% {
+            transform:translateY(0px) scale(1.02);
+        }
+        15% {
+            transform:translateY(20px) scale(1);
+        }
+        30% {
+            transform:translateY(40px) scale(.98);
+        }
+        45% {
+            transform:translateY(20px) scale(.96);
+        }
+        55% {
+            transform:translateY(0px) scale(.94);
+        }
+        70% {
+            transform:translateY(-20px) scale(.96);
+        }
+        85% {
+            transform:translateY(-40px) scale(.98);
+        }
+        100% {
+            transform:translateY(-20px) scale(1);
+        }
+    }
+
     #hands #hand-head img {
         transform: translateY(-80px);
         animation: up-and-down 1s infinite;
@@ -93,6 +120,15 @@
         background-size:contain;
         transition:.3s;
         animation: sing 1.5s infinite;
+    }
+
+    #hands #hand-faster img {
+        width:100%;
+        height:100%;
+        background-image:url(hand-faster.png);
+        background-size:contain;
+        transition:.2s;
+        animation: faster 1.6s infinite;
     }
     </style>
 </head>
@@ -123,6 +159,10 @@
         	<img src="hand-head.png">
             <h1>The Head</h1>
         </div>
+        <div class="hand-signal" id="hand-vamp">
+            <img src="hand-vamp.png">
+            <h1>Vamp</h1>
+        </div>
         <div class="hand-signal" id="hand-walk">
         	<img src="hand-walk.png">
             <h1>Walking Part</h1>
@@ -130,6 +170,10 @@
         <div class="hand-signal" id="hand-sing">
             <div id="hand-animation"></div>
             <h1>Singing Part</h1>
+        </div>
+        <div class="hand-signal" id="hand-faster">
+            <img src="hand-faster.png">
+            <h1>Faster!</h1>
         </div>
         <div class="hand-signal" id="hand-end">
         	<img src="hand-end.png">
